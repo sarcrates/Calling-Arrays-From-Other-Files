@@ -10,5 +10,5 @@ import Foundation
 
 class BurgerOptions : NSObject{
     
-    var burgeroptions : NSArray = ["Beef", "Beef and Cheese", "Fish", "Sloppy Joe"]
+    @objc var burgeroptions : NSArray = ["Beef", "Beef and Cheese", "Fish", "Sloppy Joe"]
 }

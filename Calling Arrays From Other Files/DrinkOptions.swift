@@ -9,5 +9,5 @@
 import Foundation
 
 class DrinkOptions:NSObject{
-    var drinkoptions: NSArray = ["Coke", "Diet Coke", "Sprite", "Water", "Powerade"]
+    @objc var drinkoptions: NSArray = ["Coke", "Diet Coke", "Sprite", "Water", "Powerade"]
 }

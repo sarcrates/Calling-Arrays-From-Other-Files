@@ -9,5 +9,5 @@
 import Foundation
 
 class ChipOptions:NSObject{
-    var chipoptions : NSArray = ["Lays", "Doritos", "Sun Chips", "Fries"]
+    @objc var chipoptions : NSArray = ["Lays", "Doritos", "Sun Chips", "Fries"]
 }

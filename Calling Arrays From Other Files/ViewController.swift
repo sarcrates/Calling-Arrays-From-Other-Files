@@ -24,13 +24,13 @@ class ViewController: UIViewController {
     
 
     
-    var copyBurgerOptions : NSArray = NSArray()
-    var copyChipOptions : NSArray = NSArray()
-    var copyDrinkOptions : NSArray = NSArray()
+    @objc var copyBurgerOptions : NSArray = NSArray()
+    @objc var copyChipOptions : NSArray = NSArray()
+    @objc var copyDrinkOptions : NSArray = NSArray()
     
-    var burgerpicked : Int = 0
-    var chippicked : Int = 0
-    var drinkpicked : Int = 0
+    @objc var burgerpicked : Int = 0
+    @objc var chippicked : Int = 0
+    @objc var drinkpicked : Int = 0
     
     
     override func viewDidLoad() {
@@ -67,16 +67,16 @@ class ViewController: UIViewController {
     
     
 
-    func pickABurger(){
+    @objc func pickABurger(){
         burgerpicked = Int(arc4random_uniform(UInt32(copyBurgerOptions.count)))
         BurgerGeneratedLabel.text = "\(copyBurgerOptions[burgerpicked])"
     }
     
-    func pickChips(){
+    @objc func pickChips(){
         chippicked = Int(arc4random_uniform(UInt32(copyChipOptions.count)))
         ChipsGeneratedLabel.text = "\(copyChipOptions[chippicked])"
     }
-    func pickDrink(){
+    @objc func pickDrink(){
         drinkpicked = Int(arc4random_uniform(UInt32(copyDrinkOptions.count)))
         DrinkGeneratedLabel.text = "\(copyDrinkOptions[drinkpicked])"
     }
