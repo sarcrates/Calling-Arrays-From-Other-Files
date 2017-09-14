@@ -51,13 +51,23 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBAction func GeneratedMealAction(_ sender: UIButton) {
-        pickABurger()
-        pickChips()
-        pickDrink()
-
+    override func becomeFirstResponder() -> Bool {
+        return true
     }
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            pickABurger()
+            pickChips()
+            pickDrink()
+        }
+    }
+
+   // @IBAction func GeneratedMealAction(_ sender: UIButton) {
+    //    pickABurger()
+    //    pickChips()
+    //    pickDrink()
+
+  //  }
     
     @IBAction func ResetAction(_ sender: UIButton) {
         BurgerGeneratedLabel.text = "Burger to be generated."
@@ -80,5 +90,6 @@ class ViewController: UIViewController {
         drinkpicked = Int(arc4random_uniform(UInt32(copyDrinkOptions.count)))
         DrinkGeneratedLabel.text = "\(copyDrinkOptions[drinkpicked])"
     }
+    
 }
 
